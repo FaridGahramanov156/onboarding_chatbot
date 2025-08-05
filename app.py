@@ -574,7 +574,7 @@ if __name__ == '__main__':
     os.makedirs(Config.TEMPLATES_DIR, exist_ok=True)
     os.makedirs('temp', exist_ok=True)
     os.makedirs('documents', exist_ok=True)
-
+    
     print("🚀 Enhanced AI Onboarding System Starting...")
     print("📧 Demo Accounts:")
     print("   Admin: admin / admin123")
@@ -584,5 +584,7 @@ if __name__ == '__main__':
     print("📁 File Management System: Ready")
     print("🔍 Document Search: Ready")
     print(f"🌐 Server: http://{Config.HOST}:{Config.PORT}")
-
-    app.run(debug=Config.DEBUG, host=Config.HOST, port=Config.PORT)
+    
+    # Render environment üçün port düzəlişi
+    port = int(os.environ.get('PORT', Config.PORT))
+    app.run(debug=Config.DEBUG, host=Config.HOST, port=port)
