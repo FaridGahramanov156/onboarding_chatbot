@@ -585,6 +585,4 @@ if __name__ == '__main__':
     print("🔍 Document Search: Ready")
     print(f"🌐 Server: http://{Config.HOST}:{Config.PORT}")
     
-    # Render environment üçün port düzəlişi
-    port = int(os.environ.get('PORT', Config.PORT))
-    app.run(debug=Config.DEBUG, host=Config.HOST, port=port)
+    app.run(debug=Config.DEBUG, host=Config.HOST, port=Config.PORT)
