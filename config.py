@@ -6,7 +6,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'nazirlik_ai_secret_key_2025'
     
     # Gemini API configuration
-    GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY') or "AIzaSyAk5UaULKxoV3CahPftPIwQA2Io4Ph3nno"
+    GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY') or "AIzaSyC8lYQL_ruyYkhJnNcZhXIxQ8_XKXQWnOc"
     
     # Database configuration
     DATABASE_PATH = os.environ.get('DATABASE_PATH') or 'users.db'
